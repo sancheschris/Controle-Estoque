@@ -1,0 +1,81 @@
+﻿@model ControleEstoque.Models.Entities.Produto
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Produto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoProduto)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CodigoProduto)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PrecoCusto)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PrecoCusto)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PrecoVenda)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PrecoVenda)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Qtd_Estoque)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Qtd_Estoque)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoProduto)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TipoProduto)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Marca)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Marca)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Fornecedor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Fornecedor.FornecedorID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ativo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ativo)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ProdutoID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

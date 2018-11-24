@@ -26,13 +26,38 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">ControleEstoque</a>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Controle de Estoque</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                    <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Cadastros
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Produtos", "Index", "Produtos")</li>
+                            <li class="nav-divider"></li>
+                            <li>@Html.ActionLink("Países", "Index", "Pais")</li>
+                            <li>@Html.ActionLink("Estados", "Index", "Estados")</li>
+                            <li>@Html.ActionLink("Cidades", "Index", "Cidades")</li>
+                            <li>@Html.ActionLink("Fornecedores", "Index", "Fornecedores")</li>
+                            <li class="nav-divider"></li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Operações
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Entrada de Produtos", "EntradaEstoque", "Operacao")</li>
+                            <li>@Html.ActionLink("Saída de Produtos", "SaidaEstoque", "Operacao")</li>
+                            <li>@Html.ActionLink("Lançamento de perdas", "LancPerda", "Operacao")</li>
+                            <li>@Html.ActionLink("Inventário de Estoque", "SaidaEstoque", "Operacao")</li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -44,7 +69,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2018 - ControleEstoque</p>
+            <p>&copy; 2018 - Controle de Estoque</p>
         </footer>
     </div>
 

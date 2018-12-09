@@ -4,14 +4,17 @@
     ViewData["Title"] = "Cidades";
 }
 
-<h2>Cidades</h2>
+<h2>@ViewData["Title"]</h2>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn btn-default">Create New</a>
 </p>
-<table class="table">
+
+
+
+<table class="table table-striped table-hover">
     <thead>
-        <tr>
+        <tr class="success">
             <th>
                 @Html.DisplayNameFor(model => model.Nome)
             </th>
@@ -28,7 +31,8 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+        @foreach (var item in Model)
+        {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Nome)
@@ -48,6 +52,8 @@
                 <a asp-action="Delete" asp-route-id="@item.CidadeID">Delete</a>
             </td>
         </tr>
-}
+
+        }
     </tbody>
+
 </table>
